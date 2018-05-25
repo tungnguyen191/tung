@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="">
+<title>HTML Tutorial</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+
+<body>
+    <div class="container" ng-controller="controller">
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+
+        <input ng-model="test">{{test}}
+<br/>
+        <input type="button" onclick="window.location='insert.html'" value="Insert"/>
+        <table style="width:100%" class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Fullname</th>
+                    <th>Email</th>
+                    <th>Title</th>
+                    <th>Depict</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="a in customer">
+                    <td>{{a.username}}</td>
+                    <td>{{a.fullname}}</td>
+                    <td>{{a.email}}</td>
+                    <td>{{a.title}}</td>
+                    <td>{{a.depict}}</td>
+                    <td>
+                        <button type="submit" ng-click="del(a._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+<script src="contronllers/contronller.js"></script>
+
+</html>
